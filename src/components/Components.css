@@ -1,0 +1,307 @@
+/* Home CSS */
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+:root{
+    --yellow: #e49400;
+    --green: #2d8515;
+    --red: #db2a34;
+    --blue: #2477ff;
+    --dark-blue: #17193b;
+    --purple: #474d84;
+    --purple-secondary: #333867;
+    --title-primary-color: rgb(231, 226, 226);
+}
+
+body *{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    /* background: var(--dark-blue); */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px ,
+                rgba(0, 0, 0, 0.23) 0px 3px 6px ;
+}
+
+.card-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-header h1{
+    font-weight: 900;
+    font-size: 24px;
+    color: var(--title-primary-color);
+}
+
+.card-header-buttons{
+    display: flex;
+    justify-content: stretch;
+    gap: 10px;
+    padding: 4px;
+}
+
+.card-header-buttons button{
+    padding: 8px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: var(--purple);
+    color: var(--title-primary-color);
+}
+
+.card-header-buttons .active{
+    background-color: var(--red);
+}
+
+.card-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.progress-bar{
+    height: 180px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    background: conic-gradient(var(--blue) 360deg,
+                var(--purple) 0deg);
+    border-radius: 50%;
+    animation: pulse 3s infinite;
+    transition: all ease;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+                rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+                rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.progress-bar-inner{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark-blue);
+    border-radius: 50%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.progress-bar-inner h2{
+    color: var(--title-primary-color);
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: stretch;
+    gap: 20px;
+    padding: 10px;
+}
+
+.card-footer button{
+    padding: 10px 12px;
+    border-radius: 6px;
+    background-color: var(--yellow);
+    color: var(--title-primary-color);
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.card-footer .btn-sucess{
+    background-color: var(--green);
+}
+
+.card-footer .btn-danger{
+    background-color: var(--red);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.97);
+        box-shadow: 0 0 0 0 rgba(52, 172, 224, 0.7);
+    }
+    50% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(52, 172, 224, 0);
+    }
+    100% {
+        transform: scale(0.97);
+        box-shadow: 0 0 0 0 rgba(52, 172, 224, 0);
+    }
+}
+.time-fields {
+    border: 2px solid black;
+    border-radius: 1rem;
+    background: rgb(180, 156, 156);
+    padding: 0.1rem 2rem ;
+    cursor: pointer;
+}
+
+.time-fields:hover {
+    background: red;
+}
+
+
+/* Timer size */
+.fs-timer {
+    font-size: 10rem;
+    font-weight: bolder;
+}
+
+.fs-20 {
+    font-size: 2rem;
+}
+
+.active {
+    background: #de3838;
+    color: white;
+  
+}
+
+.clock{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #c9d5e0;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+    box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.15),
+    inset 15px 15px 10px rgba(255, 255, 255, 0.75),
+    -15px -15px 35px rgba(255, 255, 255, 0.55),
+    inset -1px -1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock .numbers{
+    position: absolute;
+    inset: 35px;
+    background: #152b4a;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px #152b4a66,
+    inset 5px 5px 5px rgba(255, 255, 255, 0.55),
+    -6px -6px 10px rgba(255, 255, 255, 1);
+}
+
+
+/* .clock .numbers span{
+    position: relative;
+    inset: 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.25em;
+} */
+
+/* .clock .numbers span b{
+    font-weight: 600;
+    display: inline-block;
+} */
+
+.clock .numbers::before{
+    content: '';
+    position: absolute;
+    inset: 24px;
+    background: linear-gradient(#2196f3,#e91e63);
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.clock .numbers::after{
+    content: '';
+    position: absolute;
+    inset: 35px;
+    background: #152b4a;
+    border-radius: 50%;
+}
+
+
+.clock .numbers .circle{
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    display: inline-block;
+    justify-content: center;
+    z-index: 10;
+}
+
+.clock .numbers .circle span{
+    /* position: relative; */
+    width: 73px;
+    height: 100%;
+    color: black;
+    background: transparent;
+    margin-top: 12rem;
+    font-size: 30px;
+    transform-origin: bottom;
+    padding-top: 14rem;
+}
+
+.clock .numbers .circle span b{
+    position: absolute;
+    /* inset: 21px; */
+    /* color: #fff; */
+    margin-left: 4rem;
+    margin-top: 4rem;
+    font-size: 2.25em;
+}
+
+
+button.tast-with-text{
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    float: left;
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    line-height: 36px;
+  }
+  
+button.tast-with-text svg{
+    width: 36px;
+    float: left;
+    margin-left: 5px;
+  }
+
+
